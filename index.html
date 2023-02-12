@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>SPLI<br />TTER</h1>
+    </header>
+    <main>
+      <section id="bill-inputs" class="bill-inputs">
+        <div class="bill-inputs__wrapper">
+          <div class="bill-inputs__input-group">
+            <label for="bill" class="bill-inputs__label">Bill</label>
+            <div class="bill-inputs__input">
+              <div>
+                <img src="./Asset/IMG/icon-dollar.svg" alt="dollar" />
+              </div>
+              <input
+                type="number"
+                name="bill"
+                id="bill"
+                min="0"
+                step="any"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="bill-inputs__input-group">
+            <label for="tip" class="bill-inputs__label">Select Tip %</label>
+            <ul class="tip-grid">
+              <li class="tip-grid__tip-choice">
+                <button value="5" type="button">5%</button>
+              </li>
+
+              <li class="tip-grid__tip-choice">
+                <button value="10" type="button">10%</button>
+              </li>
+              <li class="tip-grid__tip-choice">
+                <button value="15" type="button">15%</button>
+              </li>
+              <li class="tip-grid__tip-choice">
+                <button value="25" type="button">25%</button>
+              </li>
+              <li class="tip-grid__tip-choice">
+                <button value="50" type="button">50%</button>
+              </li>
+              <li class="tip-grid__tip-choice">
+                <input
+                  type="number"
+                  name="tip"
+                  id="tip"
+                  min="0"
+                  step="1"
+                  placeholder="Custom"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="bill-inputs__input-group">
+            <label for="people" id="peopleLabel" class="bill-inputs__label"
+              ><span>Number of people</span></label
+            >
+            <div class="inputs__input">
+              <div>
+                <img src="./Asset/IMG/icon-person.svg" alt="Person" />
+              </div>
+              <input
+                type="number"
+                min="-0"
+                step="1"
+                id="people"
+                name="people"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="result" class="result">
+        <div class="result__wrapper">
+          <div class="result__tip-amount">
+            <p>Tip Amount <br /><span>/Person</span></p>
+            <h3>$0.00</h3>
+          </div>
+          <div class="result__total-bill">
+            <p>
+              total <br />
+              <span> /Person</span>
+            </p>
+            <h3>$0.00</h3>
+          </div>
+          <button type="button">RESET</button>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
